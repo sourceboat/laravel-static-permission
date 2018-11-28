@@ -28,7 +28,7 @@ trait HasRoles
     }
 
     /**
-     * Compare Rolename with given User Role
+     * Compare role with given model role
      *
      * @param  string  $role role name
      * @return bool

@@ -11,6 +11,7 @@ class PermissionTest extends TestCase
         $this->permissions = [
             'user/#',
             '!user/create',
+            'test/+/+/test',
         ];
 
         $this->app['config']->set('permission.roles.user', $this->permissions);
@@ -70,5 +71,19 @@ class PermissionTest extends TestCase
         $this->user->assignRole('user');
 
         $this->assertFalse($this->user->hasPermissionTo('news/edit'));
+    }
+
+    public function testHasPermissionToMultipleWildcards(): void
+    {
+        $this->user->assignRole('user');
+
+        $this->assertTrue($this->user->hasPermissionTo('test/testa/testb/test'));
+    }
+
+    public function testHasPermissionToWrongMultipleWildcards(): void
+    {
+        $this->user->assignRole('user');
+
+        $this->assertFalse($this->user->hasPermissionTo('test/testa/test'));
     }
 }

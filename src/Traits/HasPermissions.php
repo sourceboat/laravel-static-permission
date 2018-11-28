@@ -7,7 +7,7 @@ use Illuminate\Support\Collection;
 trait HasPermissions
 {
     /**
-     * Check if user has all permissions
+     * Check if model has all permissions
      *
      * @param  array|string  ...$permissions
      * @return bool
@@ -32,7 +32,7 @@ trait HasPermissions
     }
 
     /**
-     * Check if user has any permissions
+     * Check if model has any permissions
      *
      * @param  array|string  ...$permissions
      * @return bool
@@ -55,7 +55,7 @@ trait HasPermissions
     }
 
     /**
-     * Return current user permissions
+     * Return current model permissions
      *
      * @return \Illuminate\Support\Collection
      */
