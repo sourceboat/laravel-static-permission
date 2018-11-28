@@ -1,0 +1,3 @@
+@unlessrole($role)
+Test
+@endunlessrole
