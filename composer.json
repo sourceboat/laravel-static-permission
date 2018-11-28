@@ -1,0 +1,57 @@
+{
+    "name": "sourceboat/laravel-static-permission",
+    "description": "Define laravel permissions and roles by code",
+    "keywords": [
+        "sourceboat",
+        "permission",
+        "laravel",
+        "security",
+        "acl"
+    ],
+    "homepage": "https://github.com/sourceboat/laravel-static-permission",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Philipp Kuebler",
+            "email": "philipp@sourceboat.com",
+            "homepage": "https://sourceboat.de",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.1"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^3.7",
+        "phpunit/phpunit": "^7.4",
+        "phpmd/phpmd": "^2.6",
+        "squizlabs/php_codesniffer": "^3.3",
+        "consistence/coding-standard": "^3.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Sourceboat\\Permission\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Sourceboat\\Permission\\Test\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage",
+        "lint:phpcs": "vendor/bin/phpcs -s",
+        "lint:phpmd": "vendor/bin/phpmd config,src,tests text phpmd.xml"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Sourceboat\\Permission\\PermissionServiceProvider"
+            ]
+        }
+    }
+}
