@@ -52,12 +52,6 @@
 
   <!-- exclude directories from certain rules -->
 
-  <rule ref="Squiz.Classes.ClassFileName.NoMatch">
-    <exclude-pattern>*/database/migrations/*</exclude-pattern>
-  </rule>
-  <rule ref="PSR1.Classes.ClassDeclaration.MissingNamespace">
-    <exclude-pattern>*/database/*</exclude-pattern>
-  </rule>
   <rule ref="SlevomatCodingStandard.TypeHints.TypeHintDeclaration.MissingPropertyTypeHint">
     <exclude-pattern>*/tests/*</exclude-pattern>
   </rule>
