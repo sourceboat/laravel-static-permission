@@ -1,0 +1,3 @@
+@anypermission($permission)
+Test
+@endanypermission
