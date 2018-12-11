@@ -32,6 +32,17 @@ trait HasPermissions
     }
 
     /**
+     * Check if model has all permissions
+     *
+     * @param  array|string  ...$permissions
+     * @return bool
+     */
+    public function hasPermission(...$permissions): bool
+    {
+        return $this->hasPermissionTo($permissions);
+    }
+
+    /**
      * Check if model has any permissions
      *
      * @param  array|string  ...$permissions
