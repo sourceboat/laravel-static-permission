@@ -37,7 +37,7 @@ class PermissionServiceProvider extends ServiceProvider
             // role
             $bladeCompiler->directive('role', static function (string $arguments): string {
                 return sprintf(
-                    '<?php if (Auth::check() && Auth::user()->hasRole("%s")): ?>',
+                    '<?php if (Auth::check() && Auth::user()->hasRole(%s)): ?>',
                     $arguments
                 );
             });
@@ -49,7 +49,7 @@ class PermissionServiceProvider extends ServiceProvider
             // unlessrole
             $bladeCompiler->directive('unlessrole', static function (string $arguments): string {
                 return sprintf(
-                    '<?php if (Auth::check() && !Auth::user()->hasRole("%s")): ?>',
+                    '<?php if (Auth::check() && !Auth::user()->hasRole(%s)): ?>',
                     $arguments
                 );
             });
@@ -61,7 +61,7 @@ class PermissionServiceProvider extends ServiceProvider
             // permission
             $bladeCompiler->directive('permission', static function (string $arguments): string {
                 return sprintf(
-                    '<?php if (Auth::check() && Auth::user()->hasPermissionTo(explode(\'|\', "%s"))): ?>',
+                    '<?php if (Auth::check() && Auth::user()->hasPermissionTo(explode(\'|\', %s))): ?>',
                     $arguments
                 );
             });
@@ -73,7 +73,7 @@ class PermissionServiceProvider extends ServiceProvider
             // anypermission
             $bladeCompiler->directive('anypermission', static function (string $arguments): string {
                 return sprintf(
-                    '<?php if (Auth::check() && Auth::user()->hasAnyPermission(explode(\'|\', "%s"))): ?>',
+                    '<?php if (Auth::check() && Auth::user()->hasAnyPermission(explode(\'|\', %s))): ?>',
                     $arguments
                 );
             });
