@@ -86,4 +86,46 @@ class PermissionTest extends TestCase
 
         $this->assertFalse($this->user->hasPermissionTo('test/testa/test'));
     }
+
+    public function testHasPermissionString(): void
+    {
+        $this->user->assignRole('user');
+
+        $this->assertTrue($this->user->hasPermission('user/edit'));
+    }
+
+    public function testHasPermissionArray(): void
+    {
+        $this->user->assignRole('user');
+
+        $this->assertFalse($this->user->hasPermission(['user/edit', 'user/create']));
+    }
+
+    public function testHasPermissionForbiddenRule(): void
+    {
+        $this->user->assignRole('user');
+
+        $this->assertFalse($this->user->hasPermission('user/create'));
+    }
+
+    public function testHasPermissionNotDefined(): void
+    {
+        $this->user->assignRole('user');
+
+        $this->assertFalse($this->user->hasPermission('news/edit'));
+    }
+
+    public function testHasPermissionMultipleWildcards(): void
+    {
+        $this->user->assignRole('user');
+
+        $this->assertTrue($this->user->hasPermission('test/testa/testb/test'));
+    }
+
+    public function testHasPermissionWrongMultipleWildcards(): void
+    {
+        $this->user->assignRole('user');
+
+        $this->assertFalse($this->user->hasPermission('test/testa/test'));
+    }
 }
