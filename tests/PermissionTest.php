@@ -2,6 +2,9 @@
 
 namespace Sourceboat\Permission\Test;
 
+/**
+ * @SuppressWarnings(PHPMD.TooManyPublicMethods)
+ */
 class PermissionTest extends TestCase
 {
     protected function setUp(): void
