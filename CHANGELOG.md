@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.2 - 2019-08-12
+### Added
+ - Added Role Middleware
+
 ## 1.0.1 - 2018-12-11
 
 ### Added
