@@ -11,7 +11,7 @@ use Symfony\Component\HttpKernel\Exception\HttpException;
 class MiddlewareTest extends TestCase
 {
 
-    public function setUp(): void
+    protected function setUp(): void
     {
         parent::setUp();
 
