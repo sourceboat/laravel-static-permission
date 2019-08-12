@@ -1,20 +1,21 @@
 <?php
 
-namespace Sourceboat\Middleware\Test;
+namespace Sourceboat\Permission\Test;
 
-use Sourceboat\Middleware\RoleMiddleware;
-use Sourceboat\Permission\Test\TestCase;
+use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
+use Sourceboat\Permission\Middlewares\RoleMiddleware;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 
 class MiddlewareTest extends TestCase
 {
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 
-        $this->roleMiddleWare = new RoleMiddleware($this->app);
+        $this->roleMiddleware = new RoleMiddleware($this->app);
 
         $this->app['config']->set('permission.roles.admin', [
             'users/*',
@@ -23,31 +24,36 @@ class MiddlewareTest extends TestCase
         $this->user = User::create(['email' => 'test@user.com']);
     }
 
-    public function testGustCannotAccessProtectedRoute()
+    public function testGustCannotAccessProtectedRoute(): void
     {
         $this->assertEquals(
             $this->runMiddleware(
-                $this->roleMiddleWare, 'testRole'
-            ), 403);
-
+                $this->roleMiddleware,
+                'admin'
+            ),
+            403
+        );
     }
 
-    public function testUserCanAccessRoleIfHaveThisRole()
+    public function testUserCanAccessRoleIfHaveThisRole(): void
     {
-        $this->user->assignRole('testRole');
+        $this->user->assignRole('admin');
         Auth::login($this->user);
 
         $this->assertEquals(
             $this->runMiddleware(
-                $this->roleMiddleware, 'testRole'
-            ), 200);
+                $this->roleMiddleware,
+                'admin'
+            ),
+            200
+        );
     }
 
-    protected function runMiddleware($middleware, $parameter)
+    protected function runMiddleware(RoleMiddleware $middleware, string $parameter): int
     {
         try {
-            return $middleware->handle(new Request(), function() {
-                return (new Response())->SetContent('<html></html>');
+            return $middleware->handle(new Request, static function () {
+                return (new Response)->SetContent('<html></html>');
             }, $parameter)->status();
         } catch (HttpException $e) {
             return $e->getStatusCode();

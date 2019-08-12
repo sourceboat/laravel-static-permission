@@ -1,6 +1,6 @@
 <?php
 
-namespace Sourceboat\Middleware;
+namespace Sourceboat\Permission\Middlewares;
 
 use Closure;
 use Illuminate\Http\Request;
@@ -31,5 +31,4 @@ class RoleMiddleware
 
         return $next($request);
     }
-
 }
