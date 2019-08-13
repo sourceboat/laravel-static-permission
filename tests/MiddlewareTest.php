@@ -34,9 +34,9 @@ class MiddlewareTest extends TestCase
         $this->assertEquals(
             $this->runMiddleware(
                 $this->roleMiddleware,
-                'admin'
+                'admin',
             ),
-            403
+            403,
         );
     }
 
@@ -48,9 +48,9 @@ class MiddlewareTest extends TestCase
         $this->assertEquals(
             $this->runMiddleware(
                 $this->roleMiddleware,
-                'admin'
+                'admin',
             ),
-            200
+            200,
         );
     }
 
@@ -62,9 +62,9 @@ class MiddlewareTest extends TestCase
         $this->assertEquals(
             $this->runMiddleware(
                 $this->roleMiddleware,
-                'admin'
+                'admin',
             ),
-            403
+            403,
         );
     }
 
