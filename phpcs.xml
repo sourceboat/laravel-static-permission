@@ -3,10 +3,11 @@
   <description>The coding standard for this project.</description>
 
   <!-- files and folders to check -->
-  <file>app</file>
   <file>config</file>
-  <file>database</file>
+  <file>src</file>
   <file>tests</file>
+
+   <exclude-pattern type="relative-root">*.blade.php$</exclude-pattern>
 
   <!-- general rules -->
   <rule ref="PSR2">
