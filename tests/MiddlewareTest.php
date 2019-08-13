@@ -47,13 +47,7 @@ class MiddlewareTest extends TestCase
         $this->user->assignRole('testRole');
         Auth::login($this->user);
 
-        $this->assertEquals(
-            $this->runMiddleware(
-                $this->roleMiddleware,
-                'admin',
-            ),
-            403,
-        );
+        $this->assertEquals($this->runMiddleware($this->roleMiddleware, 'admin'), 403);
     }
 
     protected function runMiddleware(RoleMiddleware $middleware, string $parameter): int
