@@ -31,13 +31,7 @@ class MiddlewareTest extends TestCase
 
     public function testGustCannotAccessProtectedRoute(): void
     {
-        $this->assertEquals(
-            $this->runMiddleware(
-                $this->roleMiddleware,
-                'admin',
-            ),
-            403,
-        );
+        $this->assertEquals($this->runMiddleware($this->roleMiddleware, 'admin'), 403);
     }
 
     public function testUserCanAccessRoleIfHaveThisRole(): void
@@ -45,13 +39,7 @@ class MiddlewareTest extends TestCase
         $this->user->assignRole('admin');
         Auth::login($this->user);
 
-        $this->assertEquals(
-            $this->runMiddleware(
-                $this->roleMiddleware,
-                'admin',
-            ),
-            200,
-        );
+        $this->assertEquals($this->runMiddleware($this->roleMiddleware, 'admin'), 200);
     }
 
     public function testUserCantAccessRoleIfHavenotRole(): void
