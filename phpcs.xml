@@ -10,12 +10,10 @@
    <exclude-pattern type="relative-root">*.blade.php$</exclude-pattern>
 
   <!-- general rules -->
-  <rule ref="PSR2">
-    <exclude name="PSR2.Classes.ClassDeclaration.CloseBraceAfterBody"/>
-  </rule>
+  <rule ref="PSR2"/>
   <rule ref="Generic.Arrays.DisallowLongArraySyntax"/>
 
-  <!-- rules from consistence/coding-standard -->
+ <!-- rules from consistence/coding-standard -->
   <rule ref="vendor/consistence/coding-standard/Consistence/ruleset.xml">
     <exclude name="Generic.WhiteSpace.DisallowSpaceIndent.SpacesUsed" />
     <exclude name="Squiz.WhiteSpace.FunctionSpacing.BeforeFirst"/>
@@ -26,7 +24,7 @@
 
   <!-- rules from slevomat/coding-standard-->
   <rule ref="vendor/slevomat/coding-standard/SlevomatCodingStandard/ruleset.xml">
-    <exclude name="SlevomatCodingStandard.Classes.TraitUseSpacing.IncorrectLinesCountAfterLastUse"/>
+       <exclude name="SlevomatCodingStandard.Classes.TraitUseSpacing.IncorrectLinesCountAfterLastUse"/>
     <exclude name="SlevomatCodingStandard.Classes.TraitUseSpacing.IncorrectLinesCountBeforeFirstUse"/>
     <exclude name="SlevomatCodingStandard.Classes.SuperfluousExceptionNaming.SuperfluousSuffix"/>
     <exclude name="SlevomatCodingStandard.Exceptions.ReferenceThrowableOnly.ReferencedGeneralException" />
@@ -39,11 +37,11 @@
     <exclude name="SlevomatCodingStandard.Namespaces.FullyQualifiedClassNameAfterKeyword.NonFullyQualifiedExtends"/>
     <exclude name="SlevomatCodingStandard.Namespaces.FullyQualifiedClassNameAfterKeyword.NonFullyQualifiedUse"/>
     <exclude name="SlevomatCodingStandard.Namespaces.ReferenceUsedNamesOnly.PartialUse"/>
+    <!-- <exclude name="SlevomatCodingStandard.Types.EmptyLinesAroundTypeBraces"/> -->
     <exclude name="SlevomatCodingStandard.TypeHints.DeclareStrictTypes.DeclareStrictTypesMissing" />
     <exclude name="SlevomatCodingStandard.TypeHints.TypeHintDeclaration.MissingTraversablePropertyTypeHintSpecification"/>
     <exclude name="SlevomatCodingStandard.TypeHints.TypeHintDeclaration.MissingTraversableParameterTypeHintSpecification"/>
     <exclude name="SlevomatCodingStandard.TypeHints.TypeHintDeclaration.MissingTraversableReturnTypeHintSpecification"/>
-    <exclude name="SlevomatCodingStandard.TypeHints.DisallowMixedTypeHint.DisallowedMixedTypeHint"/>
     <exclude name="SlevomatCodingStandard.ControlStructures.RequireYodaComparison.RequiredYodaComparison"/>
     <exclude name="SlevomatCodingStandard.ControlStructures.NewWithParentheses.MissingParentheses"/>
     <exclude name="SlevomatCodingStandard.ControlStructures.ControlStructureSpacing.IncorrectLinesCountBeforeControlStructure"/>
@@ -55,16 +53,7 @@
 
   <!-- exclude directories from certain rules -->
 
-  <rule ref="Squiz.Classes.ClassFileName.NoMatch">
-    <exclude-pattern>*/database/migrations/*</exclude-pattern>
-  </rule>
-  <rule ref="PSR1.Classes.ClassDeclaration.MissingNamespace">
-    <exclude-pattern>*/database/*</exclude-pattern>
-  </rule>
   <rule ref="SlevomatCodingStandard.TypeHints.TypeHintDeclaration.MissingPropertyTypeHint">
-    <exclude-pattern>*/tests/*</exclude-pattern>
-  </rule>
-  <rule ref="SlevomatCodingStandard.Namespaces.FullyQualifiedGlobalConstants.NonFullyQualified">
     <exclude-pattern>*/tests/*</exclude-pattern>
   </rule>
 </ruleset>
