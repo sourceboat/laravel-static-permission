@@ -132,5 +132,5 @@ class PermissionTest extends TestCase
 
         $this->assertFalse($this->user->hasPermission('test/testa/test'));
     }
-
+    
 }

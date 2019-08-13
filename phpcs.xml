@@ -10,7 +10,9 @@
    <exclude-pattern type="relative-root">*.blade.php$</exclude-pattern>
 
   <!-- general rules -->
-  <rule ref="PSR2"/>
+  <rule ref="PSR2">
+    <exclude name="PSR2.Classes.ClassDeclaration.CloseBraceAfterBody"/>
+  </rule>
   <rule ref="Generic.Arrays.DisallowLongArraySyntax"/>
 
  <!-- rules from consistence/coding-standard -->
@@ -37,6 +39,8 @@
     <exclude name="SlevomatCodingStandard.Namespaces.FullyQualifiedClassNameAfterKeyword.NonFullyQualifiedExtends"/>
     <exclude name="SlevomatCodingStandard.Namespaces.FullyQualifiedClassNameAfterKeyword.NonFullyQualifiedUse"/>
     <exclude name="SlevomatCodingStandard.Namespaces.ReferenceUsedNamesOnly.PartialUse"/>
+    <exclude name="SlevomatCodingStandard.Functions.TrailingCommaInCall.MissingTrailingComma"/>
+    <exclude name="SlevomatCodingStandard.TypeHints.DisallowMixedTypeHint.DisallowedMixedTypeHint"/>
     <!-- <exclude name="SlevomatCodingStandard.Types.EmptyLinesAroundTypeBraces"/> -->
     <exclude name="SlevomatCodingStandard.TypeHints.DeclareStrictTypes.DeclareStrictTypesMissing" />
     <exclude name="SlevomatCodingStandard.TypeHints.TypeHintDeclaration.MissingTraversablePropertyTypeHintSpecification"/>
