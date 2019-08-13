@@ -7,6 +7,7 @@ namespace Sourceboat\Permission\Test;
  */
 class PermissionTest extends TestCase
 {
+
     protected function setUp(): void
     {
         parent::setUp();
@@ -131,4 +132,5 @@ class PermissionTest extends TestCase
 
         $this->assertFalse($this->user->hasPermission('test/testa/test'));
     }
+
 }

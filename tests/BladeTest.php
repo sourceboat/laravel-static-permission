@@ -6,6 +6,7 @@ use Artisan;
 
 class BladeTest extends TestCase
 {
+
     protected function setUp(): void
     {
         parent::setUp();
@@ -82,4 +83,5 @@ class BladeTest extends TestCase
 
         return trim((string) $view);
     }
+
 }

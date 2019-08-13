@@ -11,6 +11,11 @@ use Symfony\Component\HttpKernel\Exception\HttpException;
 class MiddlewareTest extends TestCase
 {
 
+    /**
+     * Setup the test environment.
+     *
+     * @return void
+     */
     protected function setUp(): void
     {
         parent::setUp();
@@ -49,6 +54,20 @@ class MiddlewareTest extends TestCase
         );
     }
 
+    public function testUserCantAccessRoleIfHavenotRole(): void
+    {
+        $this->user->assignRole('testRole');
+        Auth::login($this->user);
+
+        $this->assertEquals(
+            $this->runMiddleware(
+                $this->roleMiddleware,
+                'admin'
+            ),
+            403
+        );
+    }
+
     protected function runMiddleware(RoleMiddleware $middleware, string $parameter): int
     {
         try {
@@ -59,4 +78,5 @@ class MiddlewareTest extends TestCase
             return $e->getStatusCode();
         }
     }
+
 }

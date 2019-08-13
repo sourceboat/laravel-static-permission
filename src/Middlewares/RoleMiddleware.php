@@ -25,10 +25,11 @@ class RoleMiddleware
         $roles = collect(explode('|', $roles));
         $user = auth()->user();
 
-        if (! $roles->contains($user->getRoleName())) {
+        if (!$roles->contains($user->getRoleName())) {
             abort(403);
         }
 
         return $next($request);
     }
+
 }
