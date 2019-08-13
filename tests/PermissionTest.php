@@ -8,7 +8,7 @@ namespace Sourceboat\Permission\Test;
 class PermissionTest extends TestCase
 {
 
-    protected function setUp(): void
+    public function setUp(): void
     {
         parent::setUp();
 

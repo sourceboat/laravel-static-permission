@@ -7,7 +7,7 @@ use Artisan;
 class BladeTest extends TestCase
 {
 
-    protected function setUp(): void
+    public function setUp(): void
     {
         parent::setUp();
 
