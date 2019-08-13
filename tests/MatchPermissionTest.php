@@ -5,7 +5,7 @@ namespace Sourceboat\Permission\Test;
 class MatchPermissionTest extends TestCase
 {
 
-    public function setUp(): void
+    protected function setUp(): void
     {
         parent::setUp();
 
