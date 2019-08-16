@@ -1,9 +1,10 @@
-Define permissions by code
-====================================
+# laravel-static-permission
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/sourceboat/laravel-static-permission.svg?style=flat-square)](https://packagist.org/packages/sourceboat/laravel-static-permission)
 [![Build Status](https://img.shields.io/travis/sourceboat/laravel-static-permission/master.svg?style=flat-square)](https://travis-ci.org/sourceboat/laravel-static-permission)
 [![Total Downloads](https://img.shields.io/packagist/dt/sourceboat/laravel-static-permission.svg?style=flat-square)](https://packagist.org/packages/sourceboat/laravel-static-permission)
+
+Manage user permissions and roles in your Laravel application by domain driven rules.
 
 * [Installation](#installation)
 * [Usage](#usage)
@@ -12,7 +13,7 @@ Define permissions by code
   * [Using Blade directives](#using-blade-directives)
 * [Config](#config)
 
-This package allows you to manage user permissions and roles by domain driven rules.
+## Example
 
 ```php
 $user->assignRole('admin');
