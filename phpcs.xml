@@ -6,13 +6,16 @@
   <file>config</file>
   <file>src</file>
   <file>tests</file>
-  <exclude-pattern type="relative-root">*.blade.php$</exclude-pattern>
+
+   <exclude-pattern type="relative-root">*.blade.php$</exclude-pattern>
 
   <!-- general rules -->
-  <rule ref="PSR2"/>
+  <rule ref="PSR2">
+    <exclude name="PSR2.Classes.ClassDeclaration.CloseBraceAfterBody"/>
+  </rule>
   <rule ref="Generic.Arrays.DisallowLongArraySyntax"/>
 
-  <!-- rules from consistence/coding-standard -->
+ <!-- rules from consistence/coding-standard -->
   <rule ref="vendor/consistence/coding-standard/Consistence/ruleset.xml">
     <exclude name="Generic.WhiteSpace.DisallowSpaceIndent.SpacesUsed" />
     <exclude name="Squiz.WhiteSpace.FunctionSpacing.BeforeFirst"/>
@@ -23,7 +26,7 @@
 
   <!-- rules from slevomat/coding-standard-->
   <rule ref="vendor/slevomat/coding-standard/SlevomatCodingStandard/ruleset.xml">
-    <exclude name="SlevomatCodingStandard.Classes.TraitUseSpacing.IncorrectLinesCountAfterLastUse"/>
+       <exclude name="SlevomatCodingStandard.Classes.TraitUseSpacing.IncorrectLinesCountAfterLastUse"/>
     <exclude name="SlevomatCodingStandard.Classes.TraitUseSpacing.IncorrectLinesCountBeforeFirstUse"/>
     <exclude name="SlevomatCodingStandard.Classes.SuperfluousExceptionNaming.SuperfluousSuffix"/>
     <exclude name="SlevomatCodingStandard.Exceptions.ReferenceThrowableOnly.ReferencedGeneralException" />
@@ -36,7 +39,9 @@
     <exclude name="SlevomatCodingStandard.Namespaces.FullyQualifiedClassNameAfterKeyword.NonFullyQualifiedExtends"/>
     <exclude name="SlevomatCodingStandard.Namespaces.FullyQualifiedClassNameAfterKeyword.NonFullyQualifiedUse"/>
     <exclude name="SlevomatCodingStandard.Namespaces.ReferenceUsedNamesOnly.PartialUse"/>
-    <exclude name="SlevomatCodingStandard.Types.EmptyLinesAroundTypeBraces"/>
+    <exclude name="SlevomatCodingStandard.Functions.TrailingCommaInCall.MissingTrailingComma"/>
+    <exclude name="SlevomatCodingStandard.TypeHints.DisallowMixedTypeHint.DisallowedMixedTypeHint"/>
+    <!-- <exclude name="SlevomatCodingStandard.Types.EmptyLinesAroundTypeBraces"/> -->
     <exclude name="SlevomatCodingStandard.TypeHints.DeclareStrictTypes.DeclareStrictTypesMissing" />
     <exclude name="SlevomatCodingStandard.TypeHints.TypeHintDeclaration.MissingTraversablePropertyTypeHintSpecification"/>
     <exclude name="SlevomatCodingStandard.TypeHints.TypeHintDeclaration.MissingTraversableParameterTypeHintSpecification"/>
@@ -48,7 +53,7 @@
     <exclude name="SlevomatCodingStandard.ControlStructures.RequireMultiLineTernaryOperator.MultiLineTernaryOperatorNotUsed"/>
     <exclude name="SlevomatCodingStandard.ControlStructures.ControlStructureSpacing.IncorrectLinesCountAfterControlStructure"/>
     <exclude name="SlevomatCodingStandard.Operators.DisallowIncrementAndDecrementOperators.DisallowedPostIncrementOperator"/>
-  </rule>
+	</rule>
 
   <!-- exclude directories from certain rules -->
 

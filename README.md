@@ -187,6 +187,29 @@ You can use several permissions too.
 @endanypermission
 ```
 
+#### Middleware
+Add the middleware to your `src/Http/Kernel.php`
+```php
+use Sourceboat\Middleware\RoleMiddleware;
+class Kernel extends HttpKernel
+{
+... 
+  protected $routeMiddleware = [
+    ...
+    'role' => RoleMiddleware::class
+  ]
+
+}
+```
+
+And use it like 
+```php
+Route::group(['middleware' => ['role:admin']], function () {
+    //
+})
+
+```
+
 ## Config
 
 Example Config
