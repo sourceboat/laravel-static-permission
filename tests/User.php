@@ -11,6 +11,7 @@ use Sourceboat\Permission\Traits\HasRoles;
 
 class User extends Model implements AuthorizableContract, AuthenticatableContract
 {
+
     use HasRoles;
     use Authorizable;
     use Authenticatable;
@@ -25,4 +26,5 @@ class User extends Model implements AuthorizableContract, AuthenticatableContrac
     public $timestamps = false;
 
     protected $table = 'users';
+
 }

@@ -4,6 +4,7 @@ namespace Sourceboat\Permission\Test;
 
 class MatchPermissionTest extends TestCase
 {
+
     protected function setUp(): void
     {
         parent::setUp();
@@ -60,4 +61,5 @@ class MatchPermissionTest extends TestCase
 
         $this->assertFalse($this->user->matchPermission($rules, $this->permission));
     }
+
 }

@@ -6,6 +6,7 @@ use Illuminate\Support\Collection;
 
 trait HasPermissions
 {
+
     /**
      * Check if model has all permissions
      *
@@ -145,4 +146,5 @@ trait HasPermissions
 
         return $countPermissionParts === $countRuleParts;
     }
+
 }

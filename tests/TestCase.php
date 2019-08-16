@@ -9,8 +9,11 @@ use Sourceboat\Permission\PermissionServiceProvider;
 
 class TestCase extends OrchestraTestCase
 {
+
     /**
      * Setup the test environment.
+     *
+     * @return void
      */
     protected function setUp(): void
     {
@@ -68,4 +71,5 @@ class TestCase extends OrchestraTestCase
             $table->string('role')->nullable();
         });
     }
+
 }

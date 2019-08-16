@@ -4,6 +4,7 @@ namespace Sourceboat\Permission\Test;
 
 class RoleTest extends TestCase
 {
+
     protected function setUp(): void
     {
         parent::setUp();
@@ -59,4 +60,5 @@ class RoleTest extends TestCase
     {
         $this->assertEquals($this->user->getRoleName(), null);
     }
+
 }
