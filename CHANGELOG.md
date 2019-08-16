@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.1 - 2019-08-16
+
+### Changed
+
+- Fix example in readme
+
 ## 1.1.0 - 2019-08-16
 
 ### Added

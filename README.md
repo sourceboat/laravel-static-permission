@@ -191,7 +191,7 @@ You can use several permissions too.
 #### Middleware
 Add the middleware to your `src/Http/Kernel.php`
 ```php
-use Sourceboat\Middleware\RoleMiddleware;
+use Sourceboat\Permission\Middlewares\RoleMiddleware;
 class Kernel extends HttpKernel
 {
 ... 
