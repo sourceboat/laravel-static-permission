@@ -10,7 +10,7 @@ trait HasRoles
     /**
      * Assign the role to the model
      *
-     * @param  string $role rolename
+     * @param string $role rolename
      * @return $this
      */
     public function assignRole(string $role)
@@ -31,7 +31,7 @@ trait HasRoles
     /**
      * Compare role with given model role
      *
-     * @param  string  $role role name
+     * @param string $role role name
      * @return bool
      */
     public function hasRole(string $role): bool

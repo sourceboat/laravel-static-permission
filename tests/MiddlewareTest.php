@@ -11,24 +11,6 @@ use Symfony\Component\HttpKernel\Exception\HttpException;
 class MiddlewareTest extends TestCase
 {
 
-    /**
-     * Setup the test environment.
-     *
-     * @return void
-     */
-    protected function setUp(): void
-    {
-        parent::setUp();
-
-        $this->roleMiddleware = new RoleMiddleware($this->app);
-
-        $this->app['config']->set('permission.roles.admin', [
-            'users/*',
-        ]);
-
-        $this->user = User::create(['email' => 'test@user.com']);
-    }
-
     public function testGustCannotAccessProtectedRoute(): void
     {
         $this->assertEquals($this->runMiddleware($this->roleMiddleware, 'admin'), 403);
@@ -48,6 +30,24 @@ class MiddlewareTest extends TestCase
         Auth::login($this->user);
 
         $this->assertEquals($this->runMiddleware($this->roleMiddleware, 'admin'), 403);
+    }
+
+    /**
+     * Setup the test environment.
+     *
+     * @return void
+     */
+    protected function setUp(): void
+    {
+        parent::setUp();
+
+        $this->roleMiddleware = new RoleMiddleware($this->app);
+
+        $this->app['config']->set('permission.roles.admin', [
+            'users/*',
+        ]);
+
+        $this->user = User::create(['email' => 'test@user.com']);
     }
 
     protected function runMiddleware(RoleMiddleware $middleware, string $parameter): int

@@ -5,17 +5,6 @@ namespace Sourceboat\Permission\Test;
 class MatchPermissionTest extends TestCase
 {
 
-    protected function setUp(): void
-    {
-        parent::setUp();
-
-        $this->permission = [
-            'user',
-            'edit',
-        ];
-        $this->user = User::create(['email' => 'test@user.com']);
-    }
-
     public function testNoRules(): void
     {
         $rules = collect([]);
@@ -60,6 +49,17 @@ class MatchPermissionTest extends TestCase
         ]);
 
         $this->assertFalse($this->user->matchPermission($rules, $this->permission));
+    }
+
+    protected function setUp(): void
+    {
+        parent::setUp();
+
+        $this->permission = [
+            'user',
+            'edit',
+        ];
+        $this->user = User::create(['email' => 'test@user.com']);
     }
 
 }

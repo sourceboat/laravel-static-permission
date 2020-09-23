@@ -2,26 +2,9 @@
 
 namespace Sourceboat\Permission\Test;
 
-/**
- * @SuppressWarnings(PHPMD.TooManyPublicMethods)
- */
+/** @SuppressWarnings(PHPMD.TooManyPublicMethods) */
 class PermissionTest extends TestCase
 {
-
-    protected function setUp(): void
-    {
-        parent::setUp();
-
-        $this->permissions = [
-            'user/#',
-            '!user/create',
-            'test/+/+/test',
-        ];
-
-        $this->app['config']->set('permission.roles.user', $this->permissions);
-
-        $this->user = User::create(['email' => 'test@user.com']);
-    }
 
     public function testGetPermissions(): void
     {
@@ -131,6 +114,21 @@ class PermissionTest extends TestCase
         $this->user->assignRole('user');
 
         $this->assertFalse($this->user->hasPermission('test/testa/test'));
+    }
+
+    protected function setUp(): void
+    {
+        parent::setUp();
+
+        $this->permissions = [
+            'user/#',
+            '!user/create',
+            'test/+/+/test',
+        ];
+
+        $this->app['config']->set('permission.roles.user', $this->permissions);
+
+        $this->user = User::create(['email' => 'test@user.com']);
     }
     
 }

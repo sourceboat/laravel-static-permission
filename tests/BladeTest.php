@@ -7,18 +7,6 @@ use Artisan;
 class BladeTest extends TestCase
 {
 
-    protected function setUp(): void
-    {
-        parent::setUp();
-
-        $this->app['config']->set('permission.roles.admin', [
-            'users/#',
-            '!users/create',
-        ]);
-
-        $this->user = User::create(['email' => 'test@user.com']);
-    }
-
     public function testPermission(): void
     {
         $this->user->assignRole('admin');
@@ -64,6 +52,18 @@ class BladeTest extends TestCase
 
         $this->assertEquals($this->renderView('unlessrole', ['role' => 'admin']), '');
         $this->assertEquals($this->renderView('unlessrole', ['role' => 'user']), 'Test');
+    }
+
+    protected function setUp(): void
+    {
+        parent::setUp();
+
+        $this->app['config']->set('permission.roles.admin', [
+            'users/#',
+            '!users/create',
+        ]);
+
+        $this->user = User::create(['email' => 'test@user.com']);
     }
 
     /**
