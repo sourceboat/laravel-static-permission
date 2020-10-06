@@ -5,17 +5,6 @@ namespace Sourceboat\Permission\Test;
 class RoleTest extends TestCase
 {
 
-    protected function setUp(): void
-    {
-        parent::setUp();
-
-        $this->app['config']->set('permission.roles.admin', [
-            'users/*',
-        ]);
-
-        $this->user = User::create(['email' => 'test@user.com']);
-    }
-
     public function testAssignExistentRole(): void
     {
         $this->user->assignRole('admin');
@@ -59,6 +48,17 @@ class RoleTest extends TestCase
     public function testGetUnsetRoleName(): void
     {
         $this->assertEquals($this->user->getRoleName(), null);
+    }
+
+    protected function setUp(): void
+    {
+        parent::setUp();
+
+        $this->app['config']->set('permission.roles.admin', [
+            'users/*',
+        ]);
+
+        $this->user = User::create(['email' => 'test@user.com']);
     }
 
 }

@@ -5,17 +5,6 @@ namespace Sourceboat\Permission\Test;
 class MatchRuleToPermissionTest extends TestCase
 {
 
-    protected function setUp(): void
-    {
-        parent::setUp();
-
-        $this->permission = [
-            'user',
-            'edit',
-        ];
-        $this->user = User::create(['email' => 'test@user.com']);
-    }
-
     public function testDirectRule(): void
     {
         $rule = [
@@ -95,6 +84,17 @@ class MatchRuleToPermissionTest extends TestCase
         ];
 
         $this->assertFalse($this->user->matchRuleToPermission($rule, $this->permission));
+    }
+
+    protected function setUp(): void
+    {
+        parent::setUp();
+
+        $this->permission = [
+            'user',
+            'edit',
+        ];
+        $this->user = User::create(['email' => 'test@user.com']);
     }
 
 }
