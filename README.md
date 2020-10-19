@@ -52,20 +52,6 @@ $user->hasPermission('news/delete'); // false
 composer require sourceboat/laravel-static-permission
 ```
 
-Older than Laravel 5.5 need a service provider registration.
-
-```php
-// config/app.php
-
-'providers' => [
-  Sourceboat\Permission\PermissionServiceProvider::class,
-];
-```
-
-```php
-php artisan vendor:publish
-```
-
 ## Usage
 
 ### Add trait to model
