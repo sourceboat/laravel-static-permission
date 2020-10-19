@@ -8,8 +8,8 @@ Manage user permissions and roles in your Laravel application by domain driven r
 
 * [Installation](#installation)
 * [Usage](#usage)
-  * [Usign roles](#using-roles)
-  * [Usign permissions](#using-permissions)
+  * [Using roles](#using-roles)
+  * [Using permissions](#using-permissions)
   * [Using Blade directives](#using-blade-directives)
 * [Config](#config)
 
@@ -21,7 +21,7 @@ $user->assignRole('admin');
 $user->hasRole('admin'); // true
 ```
 
-You can define roles and permissions by code at `config/permission.php`.
+Define roles and permissions in `config/permission.php`.
 
 ```php
 'role' => [
@@ -38,7 +38,7 @@ You can define roles and permissions by code at `config/permission.php`.
 ]
 ```
 
-You can check permissions by
+Check permissions by
 
 ```php
 $admin->hasPermission('news/delete'); // true
@@ -62,7 +62,7 @@ composer require sourceboat/laravel-static-permission
 
 ### Using roles
 
-You can define the roles in the `config/permission.php` file.
+Define roles in `config/permission.php`.
 
 ```php
 // config/permission.php
@@ -82,7 +82,7 @@ $model->assignRole('admin');
 
 #### Check role
 
-You can check the role via:
+Check role via:
 
 ```php
 $model->hasRole('admin');
@@ -92,7 +92,7 @@ $model->getRoleName(); // return admin
 
 ### Using permissions
 
-Permissions are based on the MQTT syntax. Permissions are specified as path. Thus, individual security levels can be mapped and generally released via wildcards.
+Permissions are based on the MQTT syntax and specified as path. Thus, individual security levels can be mapped and generally released via wildcards.
 
 #### Check permissions
 
@@ -118,7 +118,7 @@ $model->hasAnyPermission(['users/show', 'users/edit']);
 - `#` Wildcard for everything following
 - `!` Before the permission - prohibits permission
 
-You can define the role permissions in the `config/permission.php` file.
+Define roles and permissions in `config/permission.php`.
 
 ```php
 // config/permission.php
@@ -136,7 +136,7 @@ You can define the role permissions in the `config/permission.php` file.
 
 ### Using Blade directives
 
-You can use Blade directives in your views.
+Use Blade directives in your views.
 
 #### Role
 
@@ -160,7 +160,7 @@ You can use Blade directives in your views.
 @endpermission
 ```
 
-You can use several permissions too.
+Use several permissions.
 
 ```blade
 @permission('user/edit|user/create')
@@ -175,6 +175,7 @@ You can use several permissions too.
 ```
 
 #### Middleware
+
 Add the middleware to your `src/Http/Kernel.php`
 ```php
 use Sourceboat\Permission\Middlewares\RoleMiddleware;
@@ -238,7 +239,7 @@ composer test
 
 ## Changelog
 
-Please see [CHANGELOG](CHANGELOG.md) for details.
+See [releases](https://github.com/sourceboat/laravel-static-permission/releases) for details.
 
 ## Contributing
 
