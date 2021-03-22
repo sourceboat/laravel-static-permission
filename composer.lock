@@ -4378,16 +4378,16 @@
         },
         {
             "name": "guzzlehttp/psr7",
-            "version": "1.7.0",
+            "version": "1.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "53330f47520498c0ae1f61f7e2c90f55690c06a3"
+                "reference": "35ea11d335fd638b5882ff1725228b3d35496ab1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/53330f47520498c0ae1f61f7e2c90f55690c06a3",
-                "reference": "53330f47520498c0ae1f61f7e2c90f55690c06a3",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/35ea11d335fd638b5882ff1725228b3d35496ab1",
+                "reference": "35ea11d335fd638b5882ff1725228b3d35496ab1",
                 "shasum": ""
             },
             "require": {
@@ -4447,9 +4447,9 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/psr7/issues",
-                "source": "https://github.com/guzzle/psr7/tree/1.7.0"
+                "source": "https://github.com/guzzle/psr7/tree/1.8.1"
             },
-            "time": "2020-09-30T07:37:11+00:00"
+            "time": "2021-03-21T16:25:00+00:00"
         },
         {
             "name": "hamcrest/hamcrest-php",
@@ -4690,25 +4690,25 @@
         },
         {
             "name": "orchestra/testbench",
-            "version": "v6.13.0",
+            "version": "v6.15.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/orchestral/testbench.git",
-                "reference": "ad3dbdf82bb3327a7b65d6191b88d0ddb3f98143"
+                "reference": "79447675f43eff94149743a318355f213a55e348"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orchestral/testbench/zipball/ad3dbdf82bb3327a7b65d6191b88d0ddb3f98143",
-                "reference": "ad3dbdf82bb3327a7b65d6191b88d0ddb3f98143",
+                "url": "https://api.github.com/repos/orchestral/testbench/zipball/79447675f43eff94149743a318355f213a55e348",
+                "reference": "79447675f43eff94149743a318355f213a55e348",
                 "shasum": ""
             },
             "require": {
                 "laravel/framework": "^8.25",
                 "mockery/mockery": "^1.4.2",
-                "orchestra/testbench-core": "^6.16",
+                "orchestra/testbench-core": "^6.19",
                 "php": "^7.3 || ^8.0",
                 "phpunit/phpunit": "^8.4 || ^9.3.3",
-                "spatie/laravel-ray": "^1.9.3"
+                "spatie/laravel-ray": "^1.17.1"
             },
             "type": "library",
             "extra": {
@@ -4739,7 +4739,7 @@
             ],
             "support": {
                 "issues": "https://github.com/orchestral/testbench/issues",
-                "source": "https://github.com/orchestral/testbench/tree/v6.13.0"
+                "source": "https://github.com/orchestral/testbench/tree/v6.15.0"
             },
             "funding": [
                 {
@@ -4751,20 +4751,20 @@
                     "type": "liberapay"
                 }
             ],
-            "time": "2021-02-21T14:16:16+00:00"
+            "time": "2021-03-21T00:45:50+00:00"
         },
         {
             "name": "orchestra/testbench-core",
-            "version": "v6.16.0",
+            "version": "v6.19.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/orchestral/testbench-core.git",
-                "reference": "c0297f31b95ba6e0f0e96d3c67d882d30680c83d"
+                "reference": "e97234a2cffe510c3d76a4f9f4a5e47b730e5c92"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orchestral/testbench-core/zipball/c0297f31b95ba6e0f0e96d3c67d882d30680c83d",
-                "reference": "c0297f31b95ba6e0f0e96d3c67d882d30680c83d",
+                "url": "https://api.github.com/repos/orchestral/testbench-core/zipball/e97234a2cffe510c3d76a4f9f4a5e47b730e5c92",
+                "reference": "e97234a2cffe510c3d76a4f9f4a5e47b730e5c92",
                 "shasum": ""
             },
             "require": {
@@ -4778,7 +4778,7 @@
                 "laravel/laravel": "8.x-dev",
                 "mockery/mockery": "^1.4.2",
                 "orchestra/canvas": "^6.1",
-                "phpunit/phpunit": "^8.4 || ^9.3.3"
+                "phpunit/phpunit": "^8.4 || ^9.3.3 || ^10.0"
             },
             "suggest": {
                 "laravel/framework": "Required for testing (^8.26).",
@@ -4794,11 +4794,6 @@
             "extra": {
                 "branch-alias": {
                     "dev-master": "6.0-dev"
-                },
-                "laravel": {
-                    "providers": [
-                        "Orchestra\\Testbench\\Foundation\\TestbenchServiceProvider"
-                    ]
                 }
             },
             "autoload": {
@@ -4841,7 +4836,7 @@
                     "type": "liberapay"
                 }
             ],
-            "time": "2021-02-21T04:20:45+00:00"
+            "time": "2021-03-21T00:28:32+00:00"
         },
         {
             "name": "pdepend/pdepend",
@@ -6979,16 +6974,16 @@
         },
         {
             "name": "spatie/laravel-ray",
-            "version": "1.13.0",
+            "version": "1.17.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-ray.git",
-                "reference": "1c5bc1785a06dac98fdbdff0b067a126dd6a81d0"
+                "reference": "c25f2c2cdf3221abce3b1250cb7296721acfd2b8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-ray/zipball/1c5bc1785a06dac98fdbdff0b067a126dd6a81d0",
-                "reference": "1c5bc1785a06dac98fdbdff0b067a126dd6a81d0",
+                "url": "https://api.github.com/repos/spatie/laravel-ray/zipball/c25f2c2cdf3221abce3b1250cb7296721acfd2b8",
+                "reference": "c25f2c2cdf3221abce3b1250cb7296721acfd2b8",
                 "shasum": ""
             },
             "require": {
@@ -6999,7 +6994,7 @@
                 "illuminate/support": "^7.20|^8.13",
                 "php": "^7.3|^8.0",
                 "spatie/backtrace": "^1.0",
-                "spatie/ray": "^1.20",
+                "spatie/ray": "^1.21.2",
                 "symfony/stopwatch": "4.2|^5.1",
                 "zbateson/mail-mime-parser": "^1.3.1"
             },
@@ -7043,7 +7038,7 @@
             ],
             "support": {
                 "issues": "https://github.com/spatie/laravel-ray/issues",
-                "source": "https://github.com/spatie/laravel-ray/tree/1.13.0"
+                "source": "https://github.com/spatie/laravel-ray/tree/1.17.1"
             },
             "funding": [
                 {
@@ -7055,7 +7050,7 @@
                     "type": "other"
                 }
             ],
-            "time": "2021-02-22T12:05:12+00:00"
+            "time": "2021-03-13T12:50:02+00:00"
         },
         {
             "name": "spatie/macroable",
@@ -7109,16 +7104,16 @@
         },
         {
             "name": "spatie/ray",
-            "version": "1.20.1",
+            "version": "1.21.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/ray.git",
-                "reference": "f51ef21fe88c4d4628f1656a73db540fdbc28773"
+                "reference": "829676b1b6791aba6660fcca6f553d72c894a0ae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/ray/zipball/f51ef21fe88c4d4628f1656a73db540fdbc28773",
-                "reference": "f51ef21fe88c4d4628f1656a73db540fdbc28773",
+                "url": "https://api.github.com/repos/spatie/ray/zipball/829676b1b6791aba6660fcca6f553d72c894a0ae",
+                "reference": "829676b1b6791aba6660fcca6f553d72c894a0ae",
                 "shasum": ""
             },
             "require": {
@@ -7168,7 +7163,7 @@
             ],
             "support": {
                 "issues": "https://github.com/spatie/ray/issues",
-                "source": "https://github.com/spatie/ray/tree/1.20.1"
+                "source": "https://github.com/spatie/ray/tree/1.21.2"
             },
             "funding": [
                 {
@@ -7180,7 +7175,7 @@
                     "type": "other"
                 }
             ],
-            "time": "2021-02-26T11:06:59+00:00"
+            "time": "2021-03-04T11:06:19+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",
@@ -7467,7 +7462,7 @@
         },
         {
             "name": "symfony/stopwatch",
-            "version": "v5.2.3",
+            "version": "v5.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/stopwatch.git",
@@ -7509,7 +7504,7 @@
             "description": "Provides a way to profile code",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/stopwatch/tree/v5.2.3"
+                "source": "https://github.com/symfony/stopwatch/tree/v5.2.4"
             },
             "funding": [
                 {
@@ -7529,16 +7524,16 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v5.2.3",
+            "version": "v5.2.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "338cddc6d74929f6adf19ca5682ac4b8e109cdb0"
+                "reference": "298a08ddda623485208506fcee08817807a251dd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/338cddc6d74929f6adf19ca5682ac4b8e109cdb0",
-                "reference": "338cddc6d74929f6adf19ca5682ac4b8e109cdb0",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/298a08ddda623485208506fcee08817807a251dd",
+                "reference": "298a08ddda623485208506fcee08817807a251dd",
                 "shasum": ""
             },
             "require": {
@@ -7584,7 +7579,7 @@
             "description": "Loads and dumps YAML files",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/yaml/tree/v5.2.3"
+                "source": "https://github.com/symfony/yaml/tree/v5.2.5"
             },
             "funding": [
                 {
@@ -7600,7 +7595,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-02-03T04:42:09+00:00"
+            "time": "2021-03-06T07:59:01+00:00"
         },
         {
             "name": "theseer/tokenizer",
