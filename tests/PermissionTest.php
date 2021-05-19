@@ -5,7 +5,6 @@ namespace Sourceboat\Permission\Test;
 /** @SuppressWarnings(PHPMD.TooManyPublicMethods) */
 class PermissionTest extends TestCase
 {
-
     public function testGetPermissions(): void
     {
         $this->user->assignRole('user');
@@ -130,5 +129,4 @@ class PermissionTest extends TestCase
 
         $this->user = User::create(['email' => 'test@user.com']);
     }
-    
 }

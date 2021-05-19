@@ -10,7 +10,6 @@ use Symfony\Component\HttpKernel\Exception\HttpException;
 
 class MiddlewareTest extends TestCase
 {
-
     public function testGustCannotAccessProtectedRoute(): void
     {
         $this->assertEquals($this->runMiddleware($this->roleMiddleware, 'admin'), 403);
@@ -53,12 +52,11 @@ class MiddlewareTest extends TestCase
     protected function runMiddleware(RoleMiddleware $middleware, string $parameter): int
     {
         try {
-            return $middleware->handle(new Request, static function () {
-                return (new Response)->SetContent('<html></html>');
+            return $middleware->handle(new Request(), static function () {
+                return (new Response())->SetContent('<html></html>');
             }, $parameter)->status();
         } catch (HttpException $e) {
             return $e->getStatusCode();
         }
     }
-
 }

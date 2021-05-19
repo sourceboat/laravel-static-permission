@@ -4,7 +4,6 @@ namespace Sourceboat\Permission\Test;
 
 class RoleTest extends TestCase
 {
-
     public function testAssignExistentRole(): void
     {
         $this->user->assignRole('admin');
@@ -60,5 +59,4 @@ class RoleTest extends TestCase
 
         $this->user = User::create(['email' => 'test@user.com']);
     }
-
 }

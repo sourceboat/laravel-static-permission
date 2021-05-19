@@ -9,6 +9,7 @@
     <file>src</file>
     <file>tests</file>
 
+    <exclude-pattern>*/tests/resources/*.blade.php</exclude-pattern>
 
     <!-- Generic -->
     <rule ref="Generic.Files.LineLength">
