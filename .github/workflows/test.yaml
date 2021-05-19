@@ -33,7 +33,7 @@ jobs:
 
       - name: Install dependencies
         continue-on-error: ${{ matrix.allowed-to-fail }}
-        run: composer update --no-interaction --no-suggest --no-progress --optimize-autoloader --quiet ${{ matrix.composer-arguments }}
+        run: composer update --no-interaction --no-suggest --no-progress --optimize-autoloader ${{ matrix.composer-arguments }}
 
       - name: Run tests
         continue-on-error: ${{ matrix.allowed-to-fail }}
