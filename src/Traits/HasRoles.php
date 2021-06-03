@@ -4,7 +4,6 @@ namespace Sourceboat\Permission\Traits;
 
 trait HasRoles
 {
-
     use HasPermissions;
 
     /**
@@ -48,5 +47,4 @@ trait HasRoles
     {
         return $this->{config('permission.column_name')};
     }
-
 }

@@ -4,7 +4,6 @@ namespace Sourceboat\Permission\Test;
 
 class MatchPermissionTest extends TestCase
 {
-
     public function testNoRules(): void
     {
         $rules = collect([]);
@@ -61,5 +60,4 @@ class MatchPermissionTest extends TestCase
         ];
         $this->user = User::create(['email' => 'test@user.com']);
     }
-
 }

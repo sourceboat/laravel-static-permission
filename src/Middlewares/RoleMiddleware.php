@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 
 class RoleMiddleware
 {
-
     /**
      * Handle an incoming request.
      *
@@ -31,5 +30,4 @@ class RoleMiddleware
 
         return $next($request);
     }
-
 }

@@ -1,0 +1,40 @@
+name: "Test PHP"
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+      - develop
+jobs:
+  phpunit:
+    name: PHPUnit
+    runs-on: ubuntu-20.04
+    strategy:
+      matrix:
+        php-versions: ['7.3', '7.4', '8.0']
+        composer-arguments: ['--prefer-lowest', '']
+        allowed-to-fail: [false]
+        include:
+          - php-versions: '8.1'
+            composer-arguments: ['--prefer-lowest', '']
+            allowed-to-fail: true
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php-versions }}
+          extensions: mbstring, curl, zip
+          coverage: xdebug
+          tools: composer
+
+      - name: Install dependencies
+        continue-on-error: ${{ matrix.allowed-to-fail }}
+        run: composer update --no-interaction --no-suggest --no-progress --optimize-autoloader ${{ matrix.composer-arguments }}
+
+      - name: Run tests
+        continue-on-error: ${{ matrix.allowed-to-fail }}
+        run: vendor/bin/phpunit --coverage-text --coverage-clover=coverage.clover

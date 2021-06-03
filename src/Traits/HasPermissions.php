@@ -6,11 +6,10 @@ use Illuminate\Support\Collection;
 
 trait HasPermissions
 {
-
     /**
      * Check if model has all permissions
      *
-     * @param array|string ...$permissions
+     * @param string[]|string ...$permissions
      * @return bool
      */
     public function hasPermissionTo(...$permissions): bool
@@ -35,7 +34,7 @@ trait HasPermissions
     /**
      * Check if model has all permissions
      *
-     * @param array|string ...$permissions
+     * @param string[]|string ...$permissions
      * @return bool
      */
     public function hasPermission(...$permissions): bool
@@ -46,7 +45,7 @@ trait HasPermissions
     /**
      * Check if model has any permissions
      *
-     * @param array|string ...$permissions
+     * @param string[]|string ...$permissions
      * @return bool
      */
     public function hasAnyPermission(...$permissions): bool
@@ -87,7 +86,7 @@ trait HasPermissions
      * Match ruleset to permission
      *
      * @param \Illuminate\Support\Collection $rules Ruleset
-     * @param array $permission
+     * @param string[] $permission
      * @return bool
      */
     public function matchPermission(Collection $rules, array $permission): bool
@@ -111,8 +110,8 @@ trait HasPermissions
     /**
      * Match one rule to permission
      *
-     * @param array $rule
-     * @param array $permission
+     * @param string[] $rule
+     * @param string[] $permission
      * @return bool
      */
     public function matchRuleToPermission(array $rule, array $permission): bool
@@ -146,5 +145,4 @@ trait HasPermissions
 
         return $countPermissionParts === $countRuleParts;
     }
-
 }
