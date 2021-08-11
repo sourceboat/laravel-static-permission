@@ -253,6 +253,7 @@ composer lint:phpmd
 This package is heavily inspired by [Spatie / laravel-permission](https://github.com/spatie/laravel-permission).
 
 - [Philipp Kübler](https://github.com/pkuebler)
+- [Tristan Damm](tristansb1)
 - [All Contributors](https://github.com/sourceboat/laravel-static-permission/graphs/contributors)
 
 ## License
