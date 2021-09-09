@@ -1,6 +1,6 @@
 <?php
 
-namespace Sourceboat\Permission\Test;
+namespace Sourceboat\Permission\Tests;
 
 use Artisan;
 

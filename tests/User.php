@@ -1,6 +1,6 @@
 <?php
 
-namespace Sourceboat\Permission\Test;
+namespace Sourceboat\Permission\Tests;
 
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;
