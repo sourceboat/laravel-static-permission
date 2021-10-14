@@ -1,6 +1,6 @@
 <?php
 
-namespace Sourceboat\Permission\Test;
+namespace Sourceboat\Permission\Tests;
 
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;
@@ -11,20 +11,27 @@ use Sourceboat\Permission\Traits\HasRoles;
 
 class User extends Model implements AuthorizableContract, AuthenticatableContract
 {
-
     use HasRoles;
     use Authorizable;
     use Authenticatable;
 
+    /**
+     * @var bool
+     * @phpcsSuppress SlevomatCodingStandard.TypeHints.PropertyTypeHint.MissingNativeTypeHint
+     */
     public $timestamps = false;
 
     /**
      * The attributes that are mass assignable.
      *
-     * @var array
+     * @var string[]
+     * @phpcsSuppress SlevomatCodingStandard.TypeHints.PropertyTypeHint.MissingNativeTypeHint
      */
     protected $fillable = ['email'];
 
+    /**
+     * @var string
+     * @phpcsSuppress SlevomatCodingStandard.TypeHints.PropertyTypeHint.MissingNativeTypeHint
+     */
     protected $table = 'users';
-
 }

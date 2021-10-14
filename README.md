@@ -1,7 +1,7 @@
 # laravel-static-permission
 
+[![Tests](https://github.com/sourceboat/laravel-static-permission/actions/workflows/test.yaml/badge.svg?branch=develop)](https://github.com/sourceboat/laravel-static-permission/actions/workflows/test.yaml)
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/sourceboat/laravel-static-permission.svg?style=flat-square)](https://packagist.org/packages/sourceboat/laravel-static-permission)
-[![Build Status](https://img.shields.io/travis/sourceboat/laravel-static-permission/master.svg?style=flat-square)](https://travis-ci.org/sourceboat/laravel-static-permission)
 [![Total Downloads](https://img.shields.io/packagist/dt/sourceboat/laravel-static-permission.svg?style=flat-square)](https://packagist.org/packages/sourceboat/laravel-static-permission)
 
 Manage user permissions and roles in your Laravel application by domain driven rules.
@@ -253,6 +253,7 @@ composer lint:phpmd
 This package is heavily inspired by [Spatie / laravel-permission](https://github.com/spatie/laravel-permission).
 
 - [Philipp Kübler](https://github.com/pkuebler)
+- [Tristan Damm](tristansb1)
 - [All Contributors](https://github.com/sourceboat/laravel-static-permission/graphs/contributors)
 
 ## License

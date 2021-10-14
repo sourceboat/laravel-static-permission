@@ -1,6 +1,6 @@
 <?php
 
-namespace Sourceboat\Permission\Test;
+namespace Sourceboat\Permission\Tests;
 
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Foundation\Application;
@@ -9,7 +9,6 @@ use Sourceboat\Permission\PermissionServiceProvider;
 
 class TestCase extends OrchestraTestCase
 {
-
     /**
      * Setup the test environment.
      *
@@ -29,6 +28,7 @@ class TestCase extends OrchestraTestCase
      * @return array
      * @SuppressWarnings(PHPMD.UnusedFormalParameter)
      * @phpcsSuppress SlevomatCodingStandard.TypeHints.ReturnTypeHint.MissingTraversableTypeHintSpecification
+     * @phpcsSuppress SlevomatCodingStandard.TypeHints.ParameterTypeHint.MissingNativeTypeHint
      */
     protected function getPackageProviders($app): array
     {
@@ -40,6 +40,7 @@ class TestCase extends OrchestraTestCase
      *
      * @param \Illuminate\Foundation\Application $app
      * @phpcsSuppress SlevomatCodingStandard.TypeHints.ReturnTypeHint.MissingTraversableTypeHintSpecification
+     * @phpcsSuppress SlevomatCodingStandard.TypeHints.ParameterTypeHint.MissingNativeTypeHint
      */
     protected function getEnvironmentSetUp($app): void
     {
@@ -71,5 +72,4 @@ class TestCase extends OrchestraTestCase
             $table->string('role')->nullable();
         });
     }
-
 }

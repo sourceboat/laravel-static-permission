@@ -1,10 +1,9 @@
 <?php
 
-namespace Sourceboat\Permission\Test;
+namespace Sourceboat\Permission\Tests;
 
 class MatchRuleToPermissionTest extends TestCase
 {
-
     public function testDirectRule(): void
     {
         $rule = [
@@ -96,5 +95,4 @@ class MatchRuleToPermissionTest extends TestCase
         ];
         $this->user = User::create(['email' => 'test@user.com']);
     }
-
 }

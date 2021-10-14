@@ -7,7 +7,6 @@ use Illuminate\View\Compilers\BladeCompiler;
 
 class PermissionServiceProvider extends ServiceProvider
 {
-
     /**
      * Bootstrap the application services.
      */
@@ -84,5 +83,4 @@ class PermissionServiceProvider extends ServiceProvider
             });
         });
     }
-
 }

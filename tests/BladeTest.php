@@ -1,12 +1,11 @@
 <?php
 
-namespace Sourceboat\Permission\Test;
+namespace Sourceboat\Permission\Tests;
 
 use Artisan;
 
 class BladeTest extends TestCase
 {
-
     public function testPermission(): void
     {
         $this->user->assignRole('admin');
@@ -71,7 +70,7 @@ class BladeTest extends TestCase
      * return compiled blade views
      *
      * @param string $view view name
-     * @param array $parameters vars can used in the view
+     * @param string[] $parameters vars can used in the view
      */
     protected function renderView(string $view, array $parameters): string
     {
@@ -83,5 +82,4 @@ class BladeTest extends TestCase
 
         return trim((string) $view);
     }
-
 }
