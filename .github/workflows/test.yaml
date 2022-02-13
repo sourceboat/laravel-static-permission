@@ -16,8 +16,8 @@ jobs:
         allowed-to-fail: [false]
         include:
           - php-versions: '8.1'
-            composer-arguments: ['--prefer-lowest', '']
-            allowed-to-fail: true
+            composer-arguments: ''
+            allowed-to-fail: false
 
     steps:
       - name: Checkout
